@@ -2,13 +2,17 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.preprocessing import OneHotEncoder
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import matplotlib.pyplot as plt
+import os
 
 from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_score
 
 df = pd.read_excel('base_churn_5000_VF2_aluno_preprocessada.xlsx')
 
-#Retirada de id e churn pelo viés
-X = df.drop(columns=['id_cliente', 'churn'])
+#Retirada de id e churn pelo viés 
+#DATA_AQUISICAO_CLIENTE deve virar tempo de contrato e DATA_OCORRENCIA_CHURN é para análise de 30, 60, 90 dias.
+X = df.drop(columns=['id_cliente', 'churn', 'data_aquisicao_cliente', 'data_ocorrencia_churn'])
 y = df['churn']
 
 
@@ -62,3 +66,17 @@ print(f"Acurácia: {accuracy:.2f}")
 print(f"F1-Score: {f1:.2f}")
 print(f"Recall: {recall:.2f}")
 print(f"Precision: {precision:.2f}")
+
+# Matriz de confusão
+cm = confusion_matrix(y_test, y_pred)
+disp = ConfusionMatrixDisplay(
+    confusion_matrix=cm,
+    display_labels=['Não Churn', 'Churn']
+)
+
+os.makedirs('results', exist_ok=True)  # Cria o diretório 'results' se não existir
+os.makedirs('results/cf', exist_ok=True)  # Cria o diretório 'results/matrizes_confusao' se não existir
+disp.plot(cmap='Blues')
+plt.title('Matriz de Confusão - Árvore de Decisão')
+plt.savefig('results/cf/arvore_decisao.png')  # Salva a figura como arquivo PNG
+plt.show()
