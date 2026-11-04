@@ -114,3 +114,5 @@ with pd.option_context('display.max_columns', None):
     print(df_60.head())
 
 df.to_excel('base_churn_5000_VF2_aluno_preprocessada.xlsx', index=False)
+
+print(df.columns)

@@ -8,7 +8,12 @@ Instale as dependências:
 ``` bash
 pip install -r requirements.txt
 ```
-Rode:
+Rode para pré-processamento de dados:
 ``` bash
 python3 preprocessing.py
+```
+
+Rode para treinamento e avaliação:
+``` bash
+python3 models.py
 ```
