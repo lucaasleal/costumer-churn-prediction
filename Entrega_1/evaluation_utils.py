@@ -63,7 +63,7 @@ def salvar_matriz_confusao(y_true, y_pred, titulo, caminho_arquivo):
     plt.close(fig)
 
 
-def exportar_relatorios(resultados_principais, historico_depths, df_importancia, n_total, n_treino, n_teste, pasta='results/relatorios'):
+def exportar_relatorios(resultados_principais, historico_depths, df_importancia, n_total, n_treino, n_teste, pasta='./Entrega_1/results/relatorios'):
     """Salva todas as métricas, matrizes de confusão e importâncias em JSON e TXT."""
     os.makedirs(pasta, exist_ok=True)
 
@@ -124,7 +124,7 @@ def exportar_relatorios(resultados_principais, historico_depths, df_importancia,
             f.write(f"  - {row['Feature']:<28}: {row['Importancia']*100:.2f}% ({row['Importancia']:.4f})\n")
 
 
-def plotar_painel_curvas(y_test, y_prob, res_base, historico_depths, caminho_saida='results/curvas/painel_metricas_aula3.png'):
+def plotar_painel_curvas(y_test, y_prob, res_base, historico_depths, caminho_saida='./Entrega_1/results/curvas/painel_metricas_aula3.png'):
     """Gera o painel com Curva ROC, Teste KS2, Curva Precisão-Recall e Curva de Overfitting (max_depth)."""
     os.makedirs(os.path.dirname(caminho_saida), exist_ok=True)
     fig, axes = plt.subplots(2, 2, figsize=(15, 11), facecolor='white')

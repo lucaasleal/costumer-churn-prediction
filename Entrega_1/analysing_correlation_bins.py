@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from sklearn.impute import KNNImputer
 
 # 1. Leitura da planilha pré-processada
-filepath = 'base_churn_5000_VF2_aluno_preprocessada.xlsx'
+filepath = './Entrega_1/base_churn_5000_VF2_aluno_preprocessada.xlsx'
 xls = pd.ExcelFile(filepath)
 df = pd.read_excel(filepath, sheet_name=xls.sheet_names[0])
 
@@ -109,8 +109,8 @@ for col in ordem_bins:
 df_resumo_bins = pd.DataFrame(resumo_bins)
 
 # 5. Geração e Salvamento dos Gráficos
-os.makedirs('results/correlacao', exist_ok=True)
-os.makedirs('results/relatorios', exist_ok=True)
+os.makedirs('./Entrega_1/results/correlacao', exist_ok=True)
+os.makedirs('./Entrega_1/results/relatorios', exist_ok=True)
 
 # Figura 1: Heatmap Variáveis Originais
 fig1, ax1 = plt.subplots(figsize=(13, 10), facecolor='white')
@@ -126,7 +126,7 @@ ax1.set_title('Matriz de Correlação de Pearson — Variáveis Originais e One-
 plt.xticks(rotation=40, ha='right', fontsize=9)
 plt.yticks(rotation=0, fontsize=9)
 plt.tight_layout()
-plt.savefig('results/correlacao/matriz_correlacao_variaveis_originais.png', dpi=300, bbox_inches='tight')
+plt.savefig('./Entrega_1/results/correlacao/matriz_correlacao_variaveis_originais.png', dpi=300, bbox_inches='tight')
 plt.close(fig1)
 
 # Figura 2: Heatmap Bins Preditivos e Combo Risco Triplo
@@ -152,7 +152,7 @@ ax2.set_title('Matriz de Correlação de Pearson — Bins Preditivos e Combo Ris
 plt.xticks(rotation=40, ha='right', fontsize=9)
 plt.yticks(rotation=0, fontsize=9)
 plt.tight_layout()
-plt.savefig('results/correlacao/matriz_correlacao_bins_combo_triplo.png', dpi=300, bbox_inches='tight')
+plt.savefig('./Entrega_1/results/correlacao/matriz_correlacao_bins_combo_triplo.png', dpi=300, bbox_inches='tight')
 plt.close(fig2)
 
 # Figura 3: Comparativo Lado a Lado (Correlação de Pearson vs Taxa de Churn %)
@@ -187,7 +187,7 @@ for bar in bars_r:
                   va='center', ha='left', fontsize=9, fontweight='bold', color='#1a252f')
 
 plt.tight_layout()
-plt.savefig('results/correlacao/comparativo_correlacao_e_taxa_churn.png', dpi=300, bbox_inches='tight')
+plt.savefig('./Entrega_1/results/correlacao/comparativo_correlacao_e_taxa_churn.png', dpi=300, bbox_inches='tight')
 plt.close(fig3)
 
 # 6. Exportação dos Resultados em JSON
@@ -198,7 +198,7 @@ relatorio_corr = {
     "diagnostico_bins_e_combo_triplo": resumo_bins,
     "matriz_correlacao_bins_completa": matriz_foco.round(4).to_dict()
 }
-with open('results/relatorios/correlacao_pearson_bins.json', 'w', encoding='utf-8') as f:
+with open('./Entrega_1/results/correlacao_pearson_bins.json', 'w', encoding='utf-8') as f:
     json.dump(relatorio_corr, f, indent=4, ensure_ascii=False)
 
 print("Análise de correlação de Pearson concluída com sucesso!")

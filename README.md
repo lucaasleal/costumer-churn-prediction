@@ -18,11 +18,6 @@ Rode para treinamento e avaliação:
 python3 ./Entrega_1/model.py
 ```
 
-Rode para plotar os gráficos de desempenho:
-``` bash
-python3 ./Entrega_1/evaluation_utils.py
-```
-
 Rode para plotar gráficos de qualidade:
 ``` bash
 python3 ./Entrega_1/analysing_quality.py

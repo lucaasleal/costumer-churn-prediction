@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import unicodedata
 
-df = pd.read_excel('base_churn_5000_VF2_aluno.xlsx')
+df = pd.read_excel('./Entrega_1/base_churn_5000_VF2_aluno.xlsx')
 
 with pd.option_context('display.max_columns', None):
     print(df.head())
@@ -112,6 +112,6 @@ for coluna in colunas_string:
 with pd.option_context('display.max_columns', None):
     print(df_60.head())
 
-df_60.to_excel('base_churn_5000_VF2_aluno_preprocessada.xlsx', index=False)
+df_60.to_excel('./Entrega_1/base_churn_5000_VF2_aluno_preprocessada.xlsx', index=False)
 
 print(df.columns)

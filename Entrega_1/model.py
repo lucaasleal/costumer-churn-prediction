@@ -16,7 +16,7 @@ from evaluation_utils import (
     plotar_painel_curvas
 )
 
-df = pd.read_excel('base_churn_5000_VF2_aluno_preprocessada.xlsx')
+df = pd.read_excel('./Entrega_1/base_churn_5000_VF2_aluno_preprocessada.xlsx')
 
 #Retirada de id e churn pelo viés 
 #DATA_AQUISICAO_CLIENTE deve virar tempo de contrato e DATA_OCORRENCIA_CHURN é para análise de 30, 60, 90 dias.
@@ -90,7 +90,7 @@ resultados_experimentos.append(res_base)
 
 # Calculando as métricas
 accuracy = accuracy_score(y_test, y_pred)
-salvar_matriz_confusao(y_test, y_pred, "Matriz de Confusão - Baseline (Limiar 0.50)", "results/cf/cm_1_baseline.png")
+salvar_matriz_confusao(y_test, y_pred, "Matriz de Confusão - Baseline (Limiar 0.50)", "./Entrega_1/results/cf/cm_1_baseline.png")
 
 # =========================================================================
 # EXPERIMENTO 2: Ajuste de Limiar Operacional (limiar=0.30 para elevar Recall)
@@ -103,7 +103,7 @@ res_limiar30 = calcular_metricas_completas(
     limiar=0.30
 )
 resultados_experimentos.append(res_limiar30)
-salvar_matriz_confusao(y_test, y_pred_limiar30, "Matriz de Confusão - Limiar 0.30", "results/cf/cm_2_limiar_030.png")
+salvar_matriz_confusao(y_test, y_pred_limiar30, "Matriz de Confusão - Limiar 0.30", "./Entrega_1/results/cf/cm_2_limiar_030.png")
 
 # =========================================================================
 # EXPERIMENTO 3: Árvore Balanceada com Random Over-Sampling (ROS no Treino)
@@ -129,7 +129,7 @@ res_ros = calcular_metricas_completas(
     limiar=0.50
 )
 resultados_experimentos.append(res_ros)
-salvar_matriz_confusao(y_test, y_pred_ros, "Matriz de Confusão - Balanceada (ROS)", "results/cf/cm_3_balanceada_ros.png")
+salvar_matriz_confusao(y_test, y_pred_ros, "Matriz de Confusão - Balanceada (ROS)", "./Entrega_1/results/cf/cm_3_balanceada_ros.png")
 
 # =========================================================================
 # EXPERIMENTO 4: Sensibilidade de Hiperparâmetros (max_depth de 1 a 15)
@@ -165,7 +165,7 @@ plot_tree(
     max_depth=3
 )
 plt.title('Estrutura da Árvore de Decisão (Top 3 Níveis)')
-plt.savefig('results/arvore_decisao_estrutura.png', dpi=300, bbox_inches='tight')
+plt.savefig('./Entrega_1/results/arvore_decisao_estrutura.png', dpi=300, bbox_inches='tight')
 plt.close(fig_tree)
 
 df_importancia = pd.DataFrame({
@@ -179,8 +179,8 @@ ax_feat.barh(top_features['Feature'], top_features['Importancia'], color='steelb
 ax_feat.invert_yaxis()
 ax_feat.set_xlabel('Importância (Gini / Redução de Impureza)')
 ax_feat.set_title('Top 10 Features Mais Importantes - Árvore de Decisão')
-os.makedirs('results/features', exist_ok=True)
-plt.savefig('results/features/importancia_variaveis.png', dpi=300, bbox_inches='tight')
+os.makedirs('./Entrega_1/results/features', exist_ok=True)
+plt.savefig('./Entrega_1/results/features/importancia_variaveis.png', dpi=300, bbox_inches='tight')
 plt.close(fig_feat)
 
 # =========================================================================
@@ -195,4 +195,4 @@ exportar_relatorios(
     n_teste=len(X_test_final)
 )
 plotar_painel_curvas(y_test, y_prob, res_base, historico_depths)
-print("Relatórios salvos em 'results/relatorios/' e gráficos salvos em 'results/'!")
+print("Relatórios salvos em './Entrega_1/results/relatorios/' e gráficos salvos em './Entrega_1/results/'!")

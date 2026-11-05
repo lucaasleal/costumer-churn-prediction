@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 # 1. Leitura automática da planilha bruta
-filepath = 'base_churn_5000_VF2_aluno.xlsx'  # Altere o nome se necessário
+filepath = './Entrega_1/base_churn_5000_VF2_aluno.xlsx'  # Altere o nome se necessário
 xls = pd.ExcelFile(filepath)
 df = pd.read_excel(filepath, sheet_name=xls.sheet_names[0])
 
@@ -223,9 +223,9 @@ ax.tick_params(axis='x', labelsize=10, colors='#2c3e50')
 ax.tick_params(axis='y', labelsize=11, colors='#2c3e50')
 
 plt.tight_layout()
-os.makedirs('results/auditoria', exist_ok=True)
+os.makedirs('./Entrega_1/results/auditoria', exist_ok=True)
 plt.savefig(
-    'results/auditoria/diagnostico_4_dimensoes.png',
+    './Entrega_1/results/auditoria/diagnostico_4_dimensoes.png',
     dpi=300,
     bbox_inches='tight',
 )
