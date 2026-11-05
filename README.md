@@ -15,5 +15,5 @@ python3 preprocessing.py
 
 Rode para treinamento e avaliação:
 ``` bash
-python3 models.py
+python3 model.py
 ```
