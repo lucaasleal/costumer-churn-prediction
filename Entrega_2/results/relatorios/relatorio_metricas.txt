@@ -1,0 +1,87 @@
+======================================================================
+   RELATÓRIO DE DESEMPENHO E AUDITORIA DE MODELOS - PREVISÃO CHURN
+======================================================================
+Total: 5004 | Treino (70%): 3502 | Teste (30%): 1502
+
+----------------------------------------------------------------------
+EXPERIMENTO: 1_Baseline_Desbalanceada_Limiar_0.50
+Hiperparâmetros: {'max_depth': 5, 'criterion': 'gini', 'balanceamento': 'Nenhum'} | Limiar: 0.50
+----------------------------------------------------------------------
+  - Acurácia  : 72.84% (0.7284)
+  - Precisão  : 62.16% (0.6216)
+  - Recall    : 59.59% (0.5959)
+  - F1-Score  : 60.84% (0.6084)
+  - AUROC     : 76.64% (0.7664)
+  - KS2       : 40.03% (0.4003 | p-valor = 9.02e-50)
+  - Matriz de Confusão (Teste):
+      TN (Permanência correta) = 777 | FP (Alarme falso) = 193
+      FN (Churn não detectado) = 215 | TP (Churn capturado) = 317
+
+----------------------------------------------------------------------
+EXPERIMENTO: 2_Baseline_Desbalanceada_Limiar_0.30
+Hiperparâmetros: {'max_depth': 5, 'criterion': 'gini', 'balanceamento': 'Nenhum'} | Limiar: 0.30
+----------------------------------------------------------------------
+  - Acurácia  : 65.71% (0.6571)
+  - Precisão  : 51.04% (0.5104)
+  - Recall    : 78.76% (0.7876)
+  - F1-Score  : 61.94% (0.6194)
+  - AUROC     : 76.64% (0.7664)
+  - KS2       : 40.03% (0.4003 | p-valor = 9.02e-50)
+  - Matriz de Confusão (Teste):
+      TN (Permanência correta) = 568 | FP (Alarme falso) = 402
+      FN (Churn não detectado) = 113 | TP (Churn capturado) = 419
+
+----------------------------------------------------------------------
+EXPERIMENTO: 3_Arvore_Balanceada_ROS_Treino
+Hiperparâmetros: {'max_depth': 5, 'criterion': 'gini', 'balanceamento': 'ROS no Treino'} | Limiar: 0.50
+----------------------------------------------------------------------
+  - Acurácia  : 69.37% (0.6937)
+  - Precisão  : 55.77% (0.5577)
+  - Recall    : 65.41% (0.6541)
+  - F1-Score  : 60.21% (0.6021)
+  - AUROC     : 75.35% (0.7535)
+  - KS2       : 37.65% (0.3765 | p-valor = 6.12e-44)
+  - Matriz de Confusão (Teste):
+      TN (Permanência correta) = 694 | FP (Alarme falso) = 276
+      FN (Churn não detectado) = 184 | TP (Churn capturado) = 348
+
+======================================================================
+   SENSIBILIDADE DE HIPERPARÂMETROS (max_depth de 1 a 15)
+======================================================================
+Depth | Acc Treino | Acc Teste | Gap Overfit | Recall | F1-Score | AUROC  | KS2
+  01  |   0.6456   |  0.6458   |   -0.0002   | 0.0000 |  0.0000  | 0.6300 | 0.2600
+  02  |   0.6985   |  0.6811   |   +0.0174   | 0.5508 |  0.5502  | 0.6873 | 0.3301
+  03  |   0.7076   |  0.6951   |   +0.0125   | 0.2218 |  0.3401  | 0.7251 | 0.3598
+  04  |   0.7379   |  0.7184   |   +0.0195   | 0.5038 |  0.5589  | 0.7524 | 0.3768
+  05  |   0.7481   |  0.7264   |   +0.0217   | 0.5545 |  0.5894  | 0.7664 | 0.4003
+  06  |   0.7604   |  0.7290   |   +0.0314   | 0.5602 |  0.5942  | 0.7669 | 0.4122
+  07  |   0.7796   |  0.7170   |   +0.0626   | 0.5169 |  0.5641  | 0.7533 | 0.3965
+  08  |   0.8047   |  0.7164   |   +0.0883   | 0.5000 |  0.5553  | 0.7373 | 0.3666
+  09  |   0.8261   |  0.7057   |   +0.1204   | 0.4793 |  0.5357  | 0.7260 | 0.3697
+  10  |   0.8521   |  0.7017   |   +0.1504   | 0.5301 |  0.5573  | 0.7077 | 0.3586
+  11  |   0.8772   |  0.6877   |   +0.1895   | 0.4793 |  0.5209  | 0.6917 | 0.3399
+  12  |   0.9038   |  0.6877   |   +0.2161   | 0.5169 |  0.5397  | 0.6714 | 0.3044
+  13  |   0.9283   |  0.6778   |   +0.2505   | 0.4850 |  0.5160  | 0.6592 | 0.2926
+  14  |   0.9532   |  0.6698   |   +0.2834   | 0.5150 |  0.5249  | 0.6531 | 0.2880
+  15  |   0.9703   |  0.6818   |   +0.2885   | 0.5188 |  0.5359  | 0.6516 | 0.2934
+
+======================================================================
+   IMPORTÂNCIA DAS VARIÁVEIS (GINI IMPORTANCE)
+======================================================================
+  - tempo_cliente_meses         : 35.24% (0.3524)
+  - tipo_contrato_Mensal        : 28.80% (0.2880)
+  - numero_chamados_90_dias     : 12.38% (0.1238)
+  - fibra_optica                : 6.82% (0.0682)
+  - mensalidade_rs              : 6.13% (0.0613)
+  - atrasos_6m                  : 5.02% (0.0502)
+  - numero_chamados_total       : 4.00% (0.0400)
+  - tipo_contrato_Bienal        : 1.61% (0.0161)
+  - debito_automatico           : 0.00% (0.0000)
+  - numero_chamados_60_dias     : 0.00% (0.0000)
+  - numero_chamados_30_dias     : 0.00% (0.0000)
+  - tipo_contrato_Anual         : 0.00% (0.0000)
+  - tipo_contrato_nan           : 0.00% (0.0000)
+  - forma_pagamento_Boleto      : 0.00% (0.0000)
+  - forma_pagamento_Cartão      : 0.00% (0.0000)
+  - forma_pagamento_Pix         : 0.00% (0.0000)
+  - forma_pagamento_nan         : 0.00% (0.0000)

@@ -1,0 +1,708 @@
+{
+    "dimensionamento_amostra": {
+        "total": 5004,
+        "treino_70_pct": 3502,
+        "teste_30_pct": 1502
+    },
+    "experimentos_modelos": [
+        {
+            "experimento": "1_Baseline_Desbalanceada_Limiar_0.50",
+            "hiperparametros": {
+                "max_depth": 5,
+                "criterion": "gini",
+                "balanceamento": "Nenhum"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.7284,
+                "precisao": 0.6216,
+                "recall": 0.5959,
+                "f1_score": 0.6084,
+                "auroc": 0.7664,
+                "ks2_stat": 0.4003,
+                "ks2_p_valor": 9.022893144520384e-50
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 777,
+                "FP_falsos_positivos": 193,
+                "FN_falsos_negativos": 215,
+                "TP_verdadeiros_positivos": 317,
+                "matriz_2x2": [
+                    [
+                        777,
+                        193
+                    ],
+                    [
+                        215,
+                        317
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "2_Baseline_Desbalanceada_Limiar_0.30",
+            "hiperparametros": {
+                "max_depth": 5,
+                "criterion": "gini",
+                "balanceamento": "Nenhum"
+            },
+            "limiar_decisao": 0.3,
+            "metricas": {
+                "acuracia": 0.6571,
+                "precisao": 0.5104,
+                "recall": 0.7876,
+                "f1_score": 0.6194,
+                "auroc": 0.7664,
+                "ks2_stat": 0.4003,
+                "ks2_p_valor": 9.022893144520384e-50
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 568,
+                "FP_falsos_positivos": 402,
+                "FN_falsos_negativos": 113,
+                "TP_verdadeiros_positivos": 419,
+                "matriz_2x2": [
+                    [
+                        568,
+                        402
+                    ],
+                    [
+                        113,
+                        419
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "3_Arvore_Balanceada_ROS_Treino",
+            "hiperparametros": {
+                "max_depth": 5,
+                "criterion": "gini",
+                "balanceamento": "ROS no Treino"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.6937,
+                "precisao": 0.5577,
+                "recall": 0.6541,
+                "f1_score": 0.6021,
+                "auroc": 0.7535,
+                "ks2_stat": 0.3765,
+                "ks2_p_valor": 6.117166930509859e-44
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 694,
+                "FP_falsos_positivos": 276,
+                "FN_falsos_negativos": 184,
+                "TP_verdadeiros_positivos": 348,
+                "matriz_2x2": [
+                    [
+                        694,
+                        276
+                    ],
+                    [
+                        184,
+                        348
+                    ]
+                ]
+            }
+        }
+    ],
+    "sensibilidade_max_depth_1_a_15": [
+        {
+            "experimento": "Exp_MaxDepth_01",
+            "hiperparametros": {
+                "max_depth": 1,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.6458,
+                "precisao": 0.0,
+                "recall": 0.0,
+                "f1_score": 0.0,
+                "auroc": 0.63,
+                "ks2_stat": 0.26,
+                "ks2_p_valor": 6.400479007428199e-21,
+                "acuracia_treino": 0.6456,
+                "gap_overfitting": -0.0002
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 970,
+                "FP_falsos_positivos": 0,
+                "FN_falsos_negativos": 532,
+                "TP_verdadeiros_positivos": 0,
+                "matriz_2x2": [
+                    [
+                        970,
+                        0
+                    ],
+                    [
+                        532,
+                        0
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_02",
+            "hiperparametros": {
+                "max_depth": 2,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.6811,
+                "precisao": 0.5497,
+                "recall": 0.5508,
+                "f1_score": 0.5502,
+                "auroc": 0.6873,
+                "ks2_stat": 0.3301,
+                "ks2_p_valor": 1.1248593028739006e-33,
+                "acuracia_treino": 0.6985,
+                "gap_overfitting": 0.0174
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 730,
+                "FP_falsos_positivos": 240,
+                "FN_falsos_negativos": 239,
+                "TP_verdadeiros_positivos": 293,
+                "matriz_2x2": [
+                    [
+                        730,
+                        240
+                    ],
+                    [
+                        239,
+                        293
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_03",
+            "hiperparametros": {
+                "max_depth": 3,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.6951,
+                "precisao": 0.7284,
+                "recall": 0.2218,
+                "f1_score": 0.3401,
+                "auroc": 0.7251,
+                "ks2_stat": 0.3598,
+                "ks2_p_valor": 4.645960977778605e-40,
+                "acuracia_treino": 0.7076,
+                "gap_overfitting": 0.0125
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 926,
+                "FP_falsos_positivos": 44,
+                "FN_falsos_negativos": 414,
+                "TP_verdadeiros_positivos": 118,
+                "matriz_2x2": [
+                    [
+                        926,
+                        44
+                    ],
+                    [
+                        414,
+                        118
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_04",
+            "hiperparametros": {
+                "max_depth": 4,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.7184,
+                "precisao": 0.6276,
+                "recall": 0.5038,
+                "f1_score": 0.5589,
+                "auroc": 0.7524,
+                "ks2_stat": 0.3768,
+                "ks2_p_valor": 5.356927072952439e-44,
+                "acuracia_treino": 0.7379,
+                "gap_overfitting": 0.0195
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 811,
+                "FP_falsos_positivos": 159,
+                "FN_falsos_negativos": 264,
+                "TP_verdadeiros_positivos": 268,
+                "matriz_2x2": [
+                    [
+                        811,
+                        159
+                    ],
+                    [
+                        264,
+                        268
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_05",
+            "hiperparametros": {
+                "max_depth": 5,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.7264,
+                "precisao": 0.629,
+                "recall": 0.5545,
+                "f1_score": 0.5894,
+                "auroc": 0.7664,
+                "ks2_stat": 0.4003,
+                "ks2_p_valor": 9.022893144520384e-50,
+                "acuracia_treino": 0.7481,
+                "gap_overfitting": 0.0217
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 796,
+                "FP_falsos_positivos": 174,
+                "FN_falsos_negativos": 237,
+                "TP_verdadeiros_positivos": 295,
+                "matriz_2x2": [
+                    [
+                        796,
+                        174
+                    ],
+                    [
+                        237,
+                        295
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_06",
+            "hiperparametros": {
+                "max_depth": 6,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.729,
+                "precisao": 0.6327,
+                "recall": 0.5602,
+                "f1_score": 0.5942,
+                "auroc": 0.7669,
+                "ks2_stat": 0.4122,
+                "ks2_p_valor": 7.830401008731933e-53,
+                "acuracia_treino": 0.7604,
+                "gap_overfitting": 0.0314
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 797,
+                "FP_falsos_positivos": 173,
+                "FN_falsos_negativos": 234,
+                "TP_verdadeiros_positivos": 298,
+                "matriz_2x2": [
+                    [
+                        797,
+                        173
+                    ],
+                    [
+                        234,
+                        298
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_07",
+            "hiperparametros": {
+                "max_depth": 7,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.717,
+                "precisao": 0.6208,
+                "recall": 0.5169,
+                "f1_score": 0.5641,
+                "auroc": 0.7533,
+                "ks2_stat": 0.3965,
+                "ks2_p_valor": 8.480471268484252e-49,
+                "acuracia_treino": 0.7796,
+                "gap_overfitting": 0.0626
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 802,
+                "FP_falsos_positivos": 168,
+                "FN_falsos_negativos": 257,
+                "TP_verdadeiros_positivos": 275,
+                "matriz_2x2": [
+                    [
+                        802,
+                        168
+                    ],
+                    [
+                        257,
+                        275
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_08",
+            "hiperparametros": {
+                "max_depth": 8,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.7164,
+                "precisao": 0.6244,
+                "recall": 0.5,
+                "f1_score": 0.5553,
+                "auroc": 0.7373,
+                "ks2_stat": 0.3666,
+                "ks2_p_valor": 1.2830785682596513e-41,
+                "acuracia_treino": 0.8047,
+                "gap_overfitting": 0.0883
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 810,
+                "FP_falsos_positivos": 160,
+                "FN_falsos_negativos": 266,
+                "TP_verdadeiros_positivos": 266,
+                "matriz_2x2": [
+                    [
+                        810,
+                        160
+                    ],
+                    [
+                        266,
+                        266
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_09",
+            "hiperparametros": {
+                "max_depth": 9,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.7057,
+                "precisao": 0.6071,
+                "recall": 0.4793,
+                "f1_score": 0.5357,
+                "auroc": 0.726,
+                "ks2_stat": 0.3697,
+                "ks2_p_valor": 2.467699457861509e-42,
+                "acuracia_treino": 0.8261,
+                "gap_overfitting": 0.1204
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 805,
+                "FP_falsos_positivos": 165,
+                "FN_falsos_negativos": 277,
+                "TP_verdadeiros_positivos": 255,
+                "matriz_2x2": [
+                    [
+                        805,
+                        165
+                    ],
+                    [
+                        277,
+                        255
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_10",
+            "hiperparametros": {
+                "max_depth": 10,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.7017,
+                "precisao": 0.5875,
+                "recall": 0.5301,
+                "f1_score": 0.5573,
+                "auroc": 0.7077,
+                "ks2_stat": 0.3586,
+                "ks2_p_valor": 8.709199465004026e-40,
+                "acuracia_treino": 0.8521,
+                "gap_overfitting": 0.1504
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 772,
+                "FP_falsos_positivos": 198,
+                "FN_falsos_negativos": 250,
+                "TP_verdadeiros_positivos": 282,
+                "matriz_2x2": [
+                    [
+                        772,
+                        198
+                    ],
+                    [
+                        250,
+                        282
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_11",
+            "hiperparametros": {
+                "max_depth": 11,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.6877,
+                "precisao": 0.5705,
+                "recall": 0.4793,
+                "f1_score": 0.5209,
+                "auroc": 0.6917,
+                "ks2_stat": 0.3399,
+                "ks2_p_valor": 1.0058240257931251e-35,
+                "acuracia_treino": 0.8772,
+                "gap_overfitting": 0.1895
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 778,
+                "FP_falsos_positivos": 192,
+                "FN_falsos_negativos": 277,
+                "TP_verdadeiros_positivos": 255,
+                "matriz_2x2": [
+                    [
+                        778,
+                        192
+                    ],
+                    [
+                        277,
+                        255
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_12",
+            "hiperparametros": {
+                "max_depth": 12,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.6877,
+                "precisao": 0.5647,
+                "recall": 0.5169,
+                "f1_score": 0.5397,
+                "auroc": 0.6714,
+                "ks2_stat": 0.3044,
+                "ks2_p_valor": 1.2568084640071754e-28,
+                "acuracia_treino": 0.9038,
+                "gap_overfitting": 0.2161
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 758,
+                "FP_falsos_positivos": 212,
+                "FN_falsos_negativos": 257,
+                "TP_verdadeiros_positivos": 275,
+                "matriz_2x2": [
+                    [
+                        758,
+                        212
+                    ],
+                    [
+                        257,
+                        275
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_13",
+            "hiperparametros": {
+                "max_depth": 13,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.6778,
+                "precisao": 0.5513,
+                "recall": 0.485,
+                "f1_score": 0.516,
+                "auroc": 0.6592,
+                "ks2_stat": 0.2926,
+                "ks2_p_valor": 1.8611682180922213e-26,
+                "acuracia_treino": 0.9283,
+                "gap_overfitting": 0.2505
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 760,
+                "FP_falsos_positivos": 210,
+                "FN_falsos_negativos": 274,
+                "TP_verdadeiros_positivos": 258,
+                "matriz_2x2": [
+                    [
+                        760,
+                        210
+                    ],
+                    [
+                        274,
+                        258
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_14",
+            "hiperparametros": {
+                "max_depth": 14,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.6698,
+                "precisao": 0.5352,
+                "recall": 0.515,
+                "f1_score": 0.5249,
+                "auroc": 0.6531,
+                "ks2_stat": 0.288,
+                "ks2_p_valor": 1.2183959468406711e-25,
+                "acuracia_treino": 0.9532,
+                "gap_overfitting": 0.2834
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 732,
+                "FP_falsos_positivos": 238,
+                "FN_falsos_negativos": 258,
+                "TP_verdadeiros_positivos": 274,
+                "matriz_2x2": [
+                    [
+                        732,
+                        238
+                    ],
+                    [
+                        258,
+                        274
+                    ]
+                ]
+            }
+        },
+        {
+            "experimento": "Exp_MaxDepth_15",
+            "hiperparametros": {
+                "max_depth": 15,
+                "criterion": "gini"
+            },
+            "limiar_decisao": 0.5,
+            "metricas": {
+                "acuracia": 0.6818,
+                "precisao": 0.5542,
+                "recall": 0.5188,
+                "f1_score": 0.5359,
+                "auroc": 0.6516,
+                "ks2_stat": 0.2934,
+                "ks2_p_valor": 1.307604738569793e-26,
+                "acuracia_treino": 0.9703,
+                "gap_overfitting": 0.2885
+            },
+            "matriz_confusao": {
+                "TN_verdadeiros_negativos": 748,
+                "FP_falsos_positivos": 222,
+                "FN_falsos_negativos": 256,
+                "TP_verdadeiros_positivos": 276,
+                "matriz_2x2": [
+                    [
+                        748,
+                        222
+                    ],
+                    [
+                        256,
+                        276
+                    ]
+                ]
+            }
+        }
+    ],
+    "importancia_variaveis_gini": [
+        {
+            "Feature": "tempo_cliente_meses",
+            "Importancia": 0.3524
+        },
+        {
+            "Feature": "tipo_contrato_Mensal",
+            "Importancia": 0.288
+        },
+        {
+            "Feature": "numero_chamados_90_dias",
+            "Importancia": 0.1238
+        },
+        {
+            "Feature": "fibra_optica",
+            "Importancia": 0.0682
+        },
+        {
+            "Feature": "mensalidade_rs",
+            "Importancia": 0.0613
+        },
+        {
+            "Feature": "atrasos_6m",
+            "Importancia": 0.0502
+        },
+        {
+            "Feature": "numero_chamados_total",
+            "Importancia": 0.04
+        },
+        {
+            "Feature": "tipo_contrato_Bienal",
+            "Importancia": 0.0161
+        },
+        {
+            "Feature": "debito_automatico",
+            "Importancia": 0.0
+        },
+        {
+            "Feature": "numero_chamados_60_dias",
+            "Importancia": 0.0
+        },
+        {
+            "Feature": "numero_chamados_30_dias",
+            "Importancia": 0.0
+        },
+        {
+            "Feature": "tipo_contrato_Anual",
+            "Importancia": 0.0
+        },
+        {
+            "Feature": "tipo_contrato_nan",
+            "Importancia": 0.0
+        },
+        {
+            "Feature": "forma_pagamento_Boleto",
+            "Importancia": 0.0
+        },
+        {
+            "Feature": "forma_pagamento_Cartão",
+            "Importancia": 0.0
+        },
+        {
+            "Feature": "forma_pagamento_Pix",
+            "Importancia": 0.0
+        },
+        {
+            "Feature": "forma_pagamento_nan",
+            "Importancia": 0.0
+        }
+    ]
+}
