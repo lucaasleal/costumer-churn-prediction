@@ -1,0 +1,27 @@
+regra,prob_churn,amostras_treino,profundidade
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias <= 2.500 E fibra_optica <= 0.500 E atrasos_6m <= 1.500 E tempo_cliente_meses > 11.500,0.288,250,6
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias <= 2.500 E fibra_optica > 0.500 E tempo_cliente_meses > 13.500 E mensalidade_rs <= 104.695 E debito_automatico <= 0.500,0.5463917525773195,194,7
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses > 30.500 E numero_chamados_total <= 1.500 E tempo_cliente_meses <= 55.500 E atrasos_6m > 0.500 E mensalidade_rs > 70.060,0.29936305732484075,157,6
+tipo_contrato_Mensal <= 0.500 E tempo_cliente_meses <= 21.500 E fibra_optica > 0.500 E atrasos_6m <= 1.500 E tempo_cliente_meses > 6.500 E numero_chamados_total <= 3.500 E tipo_contrato_Anual > 0.500,0.3656716417910448,134,7
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses > 30.500 E numero_chamados_total > 1.500 E tempo_cliente_meses > 38.500 E mensalidade_rs > 64.215 E tempo_cliente_meses <= 65.500,0.40186915887850466,107,6
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias <= 2.500 E fibra_optica > 0.500 E tempo_cliente_meses <= 13.500,0.7692307692307693,104,5
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias <= 2.500 E fibra_optica <= 0.500 E atrasos_6m > 1.500 E mensalidade_rs <= 75.320 E numero_chamados_90_dias <= 1.500,0.4117647058823529,102,7
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias > 2.500 E atrasos_6m <= 1.500 E mensalidade_rs > 87.185 E atrasos_6m > 0.500,0.8586956521739131,92,6
+tipo_contrato_Mensal <= 0.500 E tempo_cliente_meses > 21.500 E numero_chamados_total <= 2.500 E tempo_cliente_meses <= 33.500 E atrasos_6m > 0.500 E debito_automatico <= 0.500,0.2441860465116279,86,6
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias > 2.500 E atrasos_6m <= 1.500 E mensalidade_rs <= 87.185,0.5595238095238095,84,5
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias <= 2.500 E fibra_optica > 0.500 E tempo_cliente_meses > 13.500 E mensalidade_rs <= 104.695 E debito_automatico > 0.500,0.38666666666666666,75,7
+tipo_contrato_Mensal <= 0.500 E tempo_cliente_meses <= 21.500 E fibra_optica > 0.500 E atrasos_6m > 1.500,0.6486486486486487,74,4
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias <= 2.500 E fibra_optica > 0.500 E tempo_cliente_meses > 13.500 E mensalidade_rs > 104.695,0.7313432835820896,67,6
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias > 2.500 E atrasos_6m > 1.500 E tempo_cliente_meses > 12.500,0.7878787878787878,66,5
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias > 2.500 E atrasos_6m > 1.500 E tempo_cliente_meses <= 12.500,0.9365079365079365,63,5
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias > 2.500 E atrasos_6m <= 1.500 E mensalidade_rs > 87.185 E atrasos_6m <= 0.500,0.6984126984126984,63,6
+tipo_contrato_Mensal <= 0.500 E tempo_cliente_meses <= 21.500 E fibra_optica > 0.500 E atrasos_6m <= 1.500 E tempo_cliente_meses > 6.500 E numero_chamados_total > 3.500,0.5409836065573771,61,6
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias <= 2.500 E fibra_optica <= 0.500 E atrasos_6m <= 1.500 E tempo_cliente_meses <= 11.500,0.4918032786885246,61,6
+tipo_contrato_Mensal <= 0.500 E tempo_cliente_meses > 21.500 E numero_chamados_total > 2.500 E tempo_cliente_meses <= 27.500,0.4,60,4
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses > 30.500 E numero_chamados_total > 1.500 E tempo_cliente_meses <= 38.500 E atrasos_6m <= 1.500,0.39655172413793105,58,5
+tipo_contrato_Mensal <= 0.500 E tempo_cliente_meses <= 21.500 E fibra_optica <= 0.500 E tempo_cliente_meses > 7.500 E numero_chamados_90_dias > 2.500,0.25862068965517243,58,5
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses > 30.500 E numero_chamados_total > 1.500 E tempo_cliente_meses <= 38.500 E atrasos_6m > 1.500,0.6792452830188679,53,5
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias <= 2.500 E fibra_optica <= 0.500 E atrasos_6m > 1.500 E mensalidade_rs <= 75.320 E numero_chamados_90_dias > 1.500,0.6122448979591837,49,7
+tipo_contrato_Mensal <= 0.500 E tempo_cliente_meses <= 21.500 E fibra_optica <= 0.500 E tempo_cliente_meses <= 7.500,0.4857142857142857,35,4
+tipo_contrato_Mensal <= 0.500 E tempo_cliente_meses <= 21.500 E fibra_optica > 0.500 E atrasos_6m <= 1.500 E tempo_cliente_meses <= 6.500,0.8214285714285714,28,5
+tipo_contrato_Mensal > 0.500 E tempo_cliente_meses <= 30.500 E numero_chamados_90_dias <= 2.500 E fibra_optica <= 0.500 E atrasos_6m > 1.500 E mensalidade_rs > 75.320,0.8148148148148148,27,6

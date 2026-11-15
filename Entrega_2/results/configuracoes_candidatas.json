@@ -1,0 +1,66 @@
+{
+    "A_referencia": {
+        "limiar": 0.5,
+        "hiperparametros": {
+            "criterion": "entropy",
+            "max_depth": 12,
+            "min_samples_split": 63,
+            "min_samples_leaf": 7,
+            "max_leaf_nodes": null,
+            "min_impurity_decrease": 0.00026121607183602605,
+            "ccp_alpha": 1.029506834705693e-05
+        },
+        "recall_cv": 0.5890724187070864,
+        "precisao_cv": 0.6054911169698426,
+        "f1_cv": 0.5967316508536872,
+        "f2_cv": 0.5920136212396273
+    },
+    "E_com_pos_poda": {
+        "limiar": 0.24,
+        "hiperparametros": {
+            "criterion": "gini",
+            "max_depth": 10,
+            "min_samples_split": 112,
+            "min_samples_leaf": 20,
+            "max_leaf_nodes": 126,
+            "min_impurity_decrease": 0.0,
+            "ccp_alpha": 1.6943170336608883e-05
+        },
+        "recall_cv": 0.8388457054022542,
+        "precisao_cv": 0.5005588952331219,
+        "f1_cv": 0.626699280287442,
+        "f2_cv": 0.7386701302585836
+    },
+    "E_sem_pos_poda": {
+        "limiar": 0.24,
+        "hiperparametros": {
+            "criterion": "entropy",
+            "max_depth": 11,
+            "min_samples_split": 108,
+            "min_samples_leaf": 21,
+            "max_leaf_nodes": 105,
+            "min_impurity_decrease": 0.0,
+            "ccp_alpha": 0.0
+        },
+        "recall_cv": 0.8340231895323228,
+        "precisao_cv": 0.50118765599767,
+        "f1_cv": 0.6254287692914563,
+        "f2_cv": 0.7355065946182068
+    },
+    "G_maior_recall": {
+        "limiar": 0.2,
+        "hiperparametros": {
+            "criterion": "gini",
+            "max_depth": 14,
+            "min_samples_split": 33,
+            "min_samples_leaf": 79,
+            "max_leaf_nodes": null,
+            "min_impurity_decrease": 0.0,
+            "ccp_alpha": 0.0
+        },
+        "recall_cv": 0.9024841300686617,
+        "precisao_cv": 0.4639668739359638,
+        "f1_cv": 0.6124534908928714,
+        "f2_cv": 0.7585180899977065
+    }
+}

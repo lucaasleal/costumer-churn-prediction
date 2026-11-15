@@ -1,0 +1,62 @@
+{
+    "A_com_pos_poda": {
+        "limiar": 0.5,
+        "parametros": {
+            "criterion": "entropy",
+            "max_depth": 12,
+            "min_samples_split": 63,
+            "min_samples_leaf": 7,
+            "max_leaf_nodes": null,
+            "min_impurity_decrease": 0.00026121607183602605,
+            "ccp_alpha": 1.029506834705693e-05
+        }
+    },
+    "E_sem_pos_poda": {
+        "limiar": 0.24,
+        "parametros": {
+            "criterion": "entropy",
+            "max_depth": 11,
+            "min_samples_split": 108,
+            "min_samples_leaf": 21,
+            "max_leaf_nodes": 105,
+            "min_impurity_decrease": 0.0,
+            "ccp_alpha": 0.0
+        }
+    },
+    "E_com_pos_poda": {
+        "limiar": 0.24,
+        "parametros": {
+            "criterion": "gini",
+            "max_depth": 10,
+            "min_samples_split": 112,
+            "min_samples_leaf": 20,
+            "max_leaf_nodes": 126,
+            "min_impurity_decrease": 0.0,
+            "ccp_alpha": 1.6943170336608883e-05
+        }
+    },
+    "G_sem_pos_poda": {
+        "limiar": 0.2,
+        "parametros": {
+            "criterion": "gini",
+            "max_depth": 14,
+            "min_samples_split": 33,
+            "min_samples_leaf": 79,
+            "max_leaf_nodes": null,
+            "min_impurity_decrease": 0.0,
+            "ccp_alpha": 0.0
+        }
+    },
+    "E_poda_compacta": {
+        "limiar": 0.24,
+        "parametros": {
+            "criterion": "entropy",
+            "max_depth": 11,
+            "min_samples_split": 108,
+            "min_samples_leaf": 21,
+            "max_leaf_nodes": 105,
+            "min_impurity_decrease": 0.0,
+            "ccp_alpha": 0.001082636733874
+        }
+    }
+}
