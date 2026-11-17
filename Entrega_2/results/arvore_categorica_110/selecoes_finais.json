@@ -1,0 +1,5 @@
+{
+  "pre_poda": "pre_poda_recall",
+  "pos_poda": "pos_poda_recall",
+  "hibrida": "hibrida_recall"
+}

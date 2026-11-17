@@ -1,0 +1,8 @@
+modelo,rotulo,limiar,estrategia,criterio_selecao,trial,recall_cv1,f2_cv1,precisao_cv1
+baseline,Baseline (sem poda) · Referência · limiar=0.20,0.2,baseline,referência,,0.5447143412359113,0.5378750515840405,0.5124073755210758
+pre_poda_recall,Pré-poda isolada · Melhor recall · limiar=0.20 · trial #64,0.2,pre_poda,recall_churn,64.0,0.8960260396424408,0.7517215991000832,0.45768298476367564
+pre_poda_f2,Pré-poda isolada · Melhor F2 · limiar=0.20 · trial #13,0.2,pre_poda,f2_churn,13.0,0.8936131623267263,0.7538165120862305,0.46420268005080667
+pos_poda_recall,Pós-poda isolada · Melhor recall · limiar=0.20 · trial #52,0.2,pos_poda,recall_churn,52.0,0.9169354838709678,0.7290689551871476,0.4109814768166077
+pos_poda_f2,Pós-poda isolada · Melhor F2 · limiar=0.20 · trial #9,0.2,pos_poda,f2_churn,9.0,0.8517456924472082,0.7413525950980228,0.4902921629295946
+hibrida_recall,Poda híbrida (pré + pós) · Melhor recall · limiar=0.20 · trial #58,0.2,hibrida,recall_churn,58.0,0.8960260396424408,0.7517215991000832,0.45768298476367564
+hibrida_f2,Poda híbrida (pré + pós) · Melhor F2 · limiar=0.20 · trial #77,0.2,hibrida,f2_churn,77.0,0.8944196139396295,0.7544792736946132,0.464572647512614

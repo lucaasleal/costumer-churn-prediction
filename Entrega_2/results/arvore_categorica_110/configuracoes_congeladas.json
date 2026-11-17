@@ -1,0 +1,52 @@
+{
+  "baseline": {
+    "parametros": {
+      "criterion": "gini",
+      "splitter": "best",
+      "ccp_alpha": 0.0
+    },
+    "limiar": 0.2,
+    "criterio_selecao": "referência",
+    "trial": null
+  },
+  "pre_poda": {
+    "parametros": {
+      "criterion": "gini",
+      "splitter": "best",
+      "ccp_alpha": 0.0,
+      "max_depth": 12,
+      "min_samples_split": 110,
+      "min_samples_leaf": 75,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 1.7681850566270268e-05
+    },
+    "limiar": 0.2,
+    "criterio_selecao": "recall_churn",
+    "trial": 64
+  },
+  "pos_poda": {
+    "parametros": {
+      "criterion": "gini",
+      "splitter": "best",
+      "ccp_alpha": 0.009713960058649619
+    },
+    "limiar": 0.2,
+    "criterio_selecao": "recall_churn",
+    "trial": 52
+  },
+  "hibrida": {
+    "parametros": {
+      "criterion": "gini",
+      "splitter": "best",
+      "ccp_alpha": 7.487909482797312e-06,
+      "max_depth": 11,
+      "min_samples_split": 45,
+      "min_samples_leaf": 75,
+      "max_leaf_nodes": 199,
+      "min_impurity_decrease": 0.0
+    },
+    "limiar": 0.2,
+    "criterio_selecao": "recall_churn",
+    "trial": 58
+  }
+}
