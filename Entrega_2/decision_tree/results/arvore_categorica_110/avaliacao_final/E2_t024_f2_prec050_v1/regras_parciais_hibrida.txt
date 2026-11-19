@@ -1,0 +1,7 @@
+|--- tipo_contrato <= -inf
+|   |--- class: 0
+|--- tipo_contrato >  -inf
+|   |--- tempo_cliente_meses <= 33.50
+|   |   |--- class: 1
+|   |--- tempo_cliente_meses >  33.50
+|   |   |--- class: 0

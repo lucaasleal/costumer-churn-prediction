@@ -1,0 +1,6 @@
+modelo,rotulo,estrategia,criterio_selecao,trial,limiar,recall_cv1,f2_cv1,precisao_cv1,acuracia_cv1
+baseline,Baseline (sem poda) · Referência · limiar=0.20,baseline,Referência,,0.2,0.5283762878114612,0.5236062953252678,0.5059177448426185,0.6491490624845396
+pre_poda_recall,Pré-poda isolada · Melhor recall e Melhor F2 · limiar=0.20 · trial #2,pre_poda,Melhor recall + Melhor F2,2.0,0.2,0.8889733715150918,0.74663859854194,0.4558432222368395,0.5839727732977128
+pos_poda_recall,Pós-poda isolada · Melhor recall · limiar=0.20 · trial #70,pos_poda,Melhor recall,70.0,0.2,0.8574075902702347,0.7284120216273503,0.4574111015069837,0.585968188789393
+pos_poda_f2,Pós-poda isolada · Melhor F2 · limiar=0.20 · trial #26,pos_poda,Melhor F2,26.0,0.2,0.8541555577499095,0.7302872450210203,0.4625770918903722,0.5966152146308481
+hibrida_recall,Poda híbrida (pré + pós) · Melhor recall e Melhor F2 · limiar=0.20 · trial #97,hibrida,Melhor recall + Melhor F2,97.0,0.2,0.8857114644020934,0.7423577512795184,0.4511247995450616,0.5770894144032718

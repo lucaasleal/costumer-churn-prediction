@@ -458,19 +458,14 @@ def estudar_alpha_fixo(
                 recall=recall_score(y_val, pred, zero_division=0),
                 precisao=precision_score(y_val, pred, zero_division=0),
                 f2=fbeta_score(y_val, pred, beta=2, zero_division=0),
-                profundidade=tree.get_depth(), folhas=tree.get_n_leaves(),
+                acuracia=accuracy_score(y_val, pred),
                 nos=tree.tree_.node_count,
+                profundidade=tree.get_depth(), folhas=tree.get_n_leaves(),
             ))
     df_folds = pd.DataFrame(linhas)
-    medias = df_folds.groupby("ccp_alpha", as_index=False).agg(
-        recall=("recall", "mean"), recall_dp=("recall", "std"),
-        precisao=("precisao", "mean"), precisao_dp=("precisao", "std"),
-        f2=("f2", "mean"), f2_dp=("f2", "std"),
-        profundidade=("profundidade", "mean"), profundidade_dp=("profundidade", "std"),
-        folhas=("folhas", "mean"), folhas_dp=("folhas", "std"),
-        nos=("nos", "mean"), nos_dp=("nos", "std"),
-    )
-    df_media = medias
+    df_media = df_folds.groupby("ccp_alpha", as_index=False)[
+        ["recall", "precisao", "f2", "acuracia", "nos", "profundidade", "folhas"]
+    ].mean()
     pasta = Path(pasta_results)
     pasta.mkdir(parents=True, exist_ok=True)
     df_folds.to_csv(pasta / "ccp_alpha_adicional_folds.csv", index=False)

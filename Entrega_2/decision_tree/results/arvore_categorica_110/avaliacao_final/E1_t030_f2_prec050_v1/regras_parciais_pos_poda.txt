@@ -1,0 +1,13 @@
+|--- tipo_contrato <= -inf
+|   |--- numero_chamados_total <= 2.50
+|   |   |--- class: 0
+|   |--- numero_chamados_total >  2.50
+|   |   |--- class: 0
+|--- tipo_contrato >  -inf
+|   |--- tempo_cliente_meses <= 33.50
+|   |   |--- numero_chamados_total <= 2.50
+|   |   |   |--- class: 0
+|   |   |--- numero_chamados_total >  2.50
+|   |   |   |--- class: 1
+|   |--- tempo_cliente_meses >  33.50
+|   |   |--- class: 0

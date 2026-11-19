@@ -5,7 +5,7 @@
       "splitter": "best",
       "ccp_alpha": 0.0
     },
-    "limiar": 0.2,
+    "limiar": 0.3,
     "criterio_selecao": "referência",
     "trial": null
   },
@@ -14,39 +14,39 @@
       "criterion": "gini",
       "splitter": "best",
       "ccp_alpha": 0.0,
-      "max_depth": 12,
-      "min_samples_split": 110,
-      "min_samples_leaf": 75,
-      "max_leaf_nodes": null,
-      "min_impurity_decrease": 1.7681850566270268e-05
+      "max_depth": 9,
+      "min_samples_split": 58,
+      "min_samples_leaf": 77,
+      "max_leaf_nodes": 68,
+      "min_impurity_decrease": 0.0004902697883894951
     },
-    "limiar": 0.2,
+    "limiar": 0.3,
     "criterio_selecao": "recall_churn",
-    "trial": 64
+    "trial": 55
   },
   "pos_poda": {
     "parametros": {
       "criterion": "gini",
       "splitter": "best",
-      "ccp_alpha": 0.009713960058649619
+      "ccp_alpha": 0.007929627703009617
     },
-    "limiar": 0.2,
+    "limiar": 0.3,
     "criterio_selecao": "recall_churn",
-    "trial": 52
+    "trial": 17
   },
   "hibrida": {
     "parametros": {
       "criterion": "gini",
       "splitter": "best",
-      "ccp_alpha": 7.487909482797312e-06,
-      "max_depth": 11,
-      "min_samples_split": 45,
-      "min_samples_leaf": 75,
-      "max_leaf_nodes": 199,
+      "ccp_alpha": 0.0004721352962688191,
+      "max_depth": 19,
+      "min_samples_split": 30,
+      "min_samples_leaf": 74,
+      "max_leaf_nodes": 90,
       "min_impurity_decrease": 0.0
     },
-    "limiar": 0.2,
+    "limiar": 0.3,
     "criterio_selecao": "recall_churn",
-    "trial": 58
+    "trial": 31
   }
 }

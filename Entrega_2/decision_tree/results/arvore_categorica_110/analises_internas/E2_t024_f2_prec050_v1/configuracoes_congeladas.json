@@ -1,0 +1,83 @@
+{
+  "baseline": {
+    "estrategia": "baseline",
+    "criterios": [
+      "Referência"
+    ],
+    "trial": null,
+    "parametros": {
+      "criterion": "gini",
+      "splitter": "best",
+      "ccp_alpha": 0.0
+    },
+    "limiar": 0.24,
+    "recall_cv1": 0.5283762878114612,
+    "f2_cv1": 0.5236062953252678,
+    "precisao_cv1": 0.5059177448426185,
+    "acuracia_cv1": 0.6491490624845396
+  },
+  "pre_poda": {
+    "estrategia": "pre_poda",
+    "criterios": [
+      "Melhor recall",
+      "Melhor F2"
+    ],
+    "trial": 75,
+    "parametros": {
+      "criterion": "gini",
+      "splitter": "best",
+      "ccp_alpha": 0.0,
+      "max_depth": 25,
+      "min_samples_split": 18,
+      "min_samples_leaf": 16,
+      "max_leaf_nodes": 43,
+      "min_impurity_decrease": 0.0
+    },
+    "limiar": 0.24,
+    "recall_cv1": 0.7771666502090122,
+    "f2_cv1": 0.7002163700736266,
+    "precisao_cv1": 0.5027431621593268,
+    "acuracia_cv1": 0.6480037599564636
+  },
+  "pos_poda": {
+    "estrategia": "pos_poda",
+    "criterios": [
+      "Melhor recall",
+      "Melhor F2"
+    ],
+    "trial": 99,
+    "parametros": {
+      "criterion": "gini",
+      "splitter": "best",
+      "ccp_alpha": 0.0008184808256649048
+    },
+    "limiar": 0.24,
+    "recall_cv1": 0.7447319048089266,
+    "f2_cv1": 0.6787087972353468,
+    "precisao_cv1": 0.502417739652459,
+    "acuracia_cv1": 0.647435643727634
+  },
+  "hibrida": {
+    "estrategia": "hibrida",
+    "criterios": [
+      "Melhor recall",
+      "Melhor F2"
+    ],
+    "trial": 25,
+    "parametros": {
+      "criterion": "gini",
+      "splitter": "best",
+      "ccp_alpha": 0.01882002884053506,
+      "max_depth": 11,
+      "min_samples_split": 3,
+      "min_samples_leaf": 15,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0001109119720245459
+    },
+    "limiar": 0.24,
+    "recall_cv1": 0.6749909482900497,
+    "f2_cv1": 0.629456407220858,
+    "precisao_cv1": 0.5045002113053301,
+    "acuracia_cv1": 0.6445732119593002
+  }
+}

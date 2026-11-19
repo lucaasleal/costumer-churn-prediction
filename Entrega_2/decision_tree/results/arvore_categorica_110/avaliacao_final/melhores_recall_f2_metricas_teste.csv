@@ -1,3 +1,0 @@
-modelo,TN,FP,FN,TP,recall_oof,precisao_oof,f2_oof,acuracia_oof,percentual_previsto_churn,rotulo,limiar
-pos_poda_recall,0,970,0,532,1.0,0.35419440745672437,0.7327823691460055,0.35419440745672437,1.0,Pós-poda isolada · Melhor recall · limiar=0.20 · trial #52,0.2
-pre_poda_f2,428,542,50,482,0.9060150375939849,0.470703125,0.7645939086294417,0.6058588548601864,0.681757656458056,Pré-poda isolada · Melhor F2 · limiar=0.20 · trial #13,0.2

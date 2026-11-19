@@ -1,0 +1,3 @@
+conjunto,acuracia_baseline,recall_baseline,acuracia_maioria,acuracia_balanceada
+Treino (70%),1.0,1.0,0.6457077232271031,1.0
+Teste (30%),0.6630944407233758,0.5500945179584121,0.6456798392498325,0.6375991261991231

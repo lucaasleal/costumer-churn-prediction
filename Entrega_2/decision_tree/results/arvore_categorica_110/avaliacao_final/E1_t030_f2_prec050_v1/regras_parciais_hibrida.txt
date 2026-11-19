@@ -1,0 +1,58 @@
+|--- tipo_contrato <= -inf
+|   |--- numero_chamados_total <= 2.50
+|   |   |--- tempo_cliente_meses <= 29.50
+|   |   |   |--- atrasos_6m <= 0.80
+|   |   |   |   |--- tempo_cliente_meses <= 19.50
+|   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- tempo_cliente_meses >  19.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- atrasos_6m >  0.80
+|   |   |   |   |--- fibra_optica <= 0.50
+|   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- fibra_optica >  0.50
+|   |   |   |   |   |--- truncated branch of depth 2
+|   |   |--- tempo_cliente_meses >  29.50
+|   |   |   |--- class: 0
+|   |--- numero_chamados_total >  2.50
+|   |   |--- tempo_cliente_meses <= 27.50
+|   |   |   |--- numero_chamados_30_dias <= 1.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- numero_chamados_30_dias >  1.50
+|   |   |   |   |--- class: 1
+|   |   |--- tempo_cliente_meses >  27.50
+|   |   |   |--- class: 0
+|--- tipo_contrato >  -inf
+|   |--- tempo_cliente_meses <= 33.50
+|   |   |--- numero_chamados_90_dias <= 2.50
+|   |   |   |--- mensalidade_rs <= 70.05
+|   |   |   |   |--- atrasos_6m <= 1.50
+|   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- atrasos_6m >  1.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- mensalidade_rs >  70.05
+|   |   |   |   |--- atrasos_6m <= 1.30
+|   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |--- atrasos_6m >  1.30
+|   |   |   |   |   |--- truncated branch of depth 2
+|   |   |--- numero_chamados_90_dias >  2.50
+|   |   |   |--- atrasos_6m <= 1.50
+|   |   |   |   |--- mensalidade_rs <= 87.18
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- mensalidade_rs >  87.18
+|   |   |   |   |   |--- class: 1
+|   |   |   |--- atrasos_6m >  1.50
+|   |   |   |   |--- class: 1
+|   |--- tempo_cliente_meses >  33.50
+|   |   |--- mensalidade_rs <= 71.71
+|   |   |   |--- numero_chamados_60_dias <= 0.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- numero_chamados_60_dias >  0.50
+|   |   |   |   |--- class: 0
+|   |   |--- mensalidade_rs >  71.71
+|   |   |   |--- tempo_cliente_meses <= 52.50
+|   |   |   |   |--- numero_chamados_60_dias <= 0.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- numero_chamados_60_dias >  0.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- tempo_cliente_meses >  52.50
+|   |   |   |   |--- class: 0
